@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>viewInbox</title>
+
+    <!-- WinJS references -->
+    <link href="/lib/winjs-4.0.1/css/ui-dark.css" rel="stylesheet" />
+    <script src="/lib/winjs-4.0.1/js/base.js"></script>
+    <script src="/lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="/css/default.css" rel="stylesheet" />
+
+    <script src="/js/viewUser.js"></script>
+</head>
+<body class="win-type-body">
+    <div>
+
+        <div id="div1" class="win-type-ellipsis">
+            <h2 id="assign1">User Information</h2>
+        </div>
+
+        <button class="win-button" id="userGoBack">Go back</button>
+        <button  class="win-button" id="userRefresh"> Refresh</button>
+
+
+        <h3 id="vuName"> </h3>
+        <h4 id="vuPassword"></h4>
+        <h4 id="vuLatitude"></h4>
+        <h4 id="vuLongitude"></h4>
+        <h4 id="vuID"></h4>
+
+
+        <button id="updatePassword">Update Password</button>
+
+        <form id="userForm1" action="javascript:updateUser()" method="POST" style="display: none">
+            <fieldset>
+                <legend>Change Password</legend>
+                <p><label> Password:</label> <input id="passChange" class="win-textbox" type="text"></p>
+
+
+                <input type="submit" id="passSubmit" class="win-button" value="Submit"> <input type="reset" class="win-button" value="Reset">
+            </fieldset>
+            <p id="vuP1"></p>
+        </form>
+
+        
+
+    </div>
+</body>
+</html>

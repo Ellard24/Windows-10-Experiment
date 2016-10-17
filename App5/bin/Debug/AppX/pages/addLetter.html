@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>addLetter</title>
+
+    <!-- WinJS references -->
+    <link href="/lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="/lib/winjs-4.0.1/js/base.js"></script>
+    <script src="/lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="/css/default.css" rel="stylesheet" />
+
+    <script src="/js/addLetter.js"></script>
+</head>
+<body class="win-type-body">
+    <div>
+
+        <div id="div1" class="win-type-ellipsis">
+            <h2 id="assign1">Letters</h2>
+        </div>
+
+        <div>
+
+            <form id="form1" action="javascript:createLetter()" method="POST">
+                <fieldset>
+                    <legend>Letter Information</legend>
+                    <p><label> Title:</label> <input id="title" class="win-textbox" type="text"></p>
+
+                    <p><label> Content:</label> <input id="content" class="win-textbox" /> </p>
+
+                    <input type="submit" id="submission2" class="win-button" value="Submit"> <input type="reset" class="win-button" value="Reset">
+                </fieldset>
+            </form>
+
+            <p id="letterP1"></p>
+
+
+        </div>
+
+
+
+
+        <!-- Simple template for the ListView instantiation  -->
+        <div class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+            <div class="smallListIconTextItem">
+                <img src="http://ymcamarlins.com/new/wp-content/uploads/2016/06/Document-Icon-small_1.png" class="smallListIconTextItem-Image" />
+                <div class="smallListIconTextItem-Detail">
+                    <h4 class="letterName win-h4" data-win-bind="textContent: name"></h4>
+                    <h6 class="letterID win-h6" data-win-bind="textContent: letterID"></h6>
+                    <h6 class="letterContent win-h6" data-win-bind="textContent: content"></h6>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- The declarative markup necesary for ListView instantiation -->
+        <!-- Call WinJS.UI.processAll() in your initialization code -->
+        <div id="listView1" class="listView win-selectionstylefilled"
+             data-win-control="WinJS.UI.ListView"
+             data-win-options="{
+                itemDataSource: Letter.ListView.data.dataSource,
+                itemTemplate: select('.smallListIconTextTemplate'),
+                selectionMode: 'none',
+                tapBehavior: 'none',
+                layout: { type: WinJS.UI.ListLayout }
+        }">
+        </div>
+
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>homePage</title>
+
+    <!-- WinJS references -->
+    <link href="/lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="/lib/winjs-4.0.1/js/base.js"></script>
+    <script src="/lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="/css/default.css" rel="stylesheet" />
+    
+    <script src="/js/home.js"></script>
+</head>
+<body>
+    <!-- The content that will be loaded and displayed. -->
+    <div id="addStuff" class="container">
+        <h1 id="h1" class="win-h1">Login Screen</h1>
+        <p class="win-type-body">Please enter User Name and Password or Register a New Account</p>
+        <div class="content">
+            <form  id="form1" action="javascript:nameCheck()" method="GET">
+                <fieldset>
+                    <legend>Login Information</legend>
+                    <p><label> Name:</label> <input id="name" class="win-textbox" type="text"></p>
+                    <p><label>Password</label> <input id="password" class="win-textbox" type="text"></p>
+
+                    <input type="submit" id="submittion" class="win-button" value="Submit"> <input type="reset" class="win-button" value="Reset">
+                </fieldset>
+            </form>
+
+            <form id="form2" method="POST" action="javascript:createUser()" style="display: none">
+                <fieldset>
+                    <legend>Register New User</legend>
+                    <p><label> Name:</label> <input id="regName" class="win-textbox" type="text"></p>
+                    <p><label>Password</label> <input id="regPass" class="win-textbox" type="text"></p>
+
+                    <input type="submit" id="regSubmit" class="win-button" value="Submit"> <input type="reset" class="win-button" value="Reset">
+                </fieldset>
+            </form>
+        </div>
+        <input id="b1" type="button" value="Login Form" /> <input id="b2" type="button" value="Register Form" />
+        
+        <p> Logging in from:</p>
+        <p id="coordinates"></p>
+        <p id="address"></p>
+        <p id="p1"> </p>
+    </div>
+</body>
+</html>

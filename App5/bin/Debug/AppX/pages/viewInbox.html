@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>viewInbox</title>
+
+    <!-- WinJS references -->
+    <link href="/lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="/lib/winjs-4.0.1/js/base.js"></script>
+    <script src="/lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="/css/default.css" rel="stylesheet" />
+
+    <script src="/js/viewInbox.js"></script>
+</head>
+<body class="win-type-body">
+    <div>
+
+        <div id="div1" class="win-type-ellipsis">
+            <h2 id="assign1">Inboxes</h2>
+        </div>
+
+
+
+
+
+        <!-- Simple template for the ListView instantiation  -->
+        <div  class="smallListIconTextTemplate" data-win-control="WinJS.Binding.Template" style="display: none">
+            <div class="smallListIconTextItem">
+                <img src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698925-icon-92-inbox-download-128.png" class="smallListIconTextItem-Image"/>
+                <div class="smallListIconTextItem-Detail">
+                    <h4 class="name win-h4" data-win-bind="textContent: name"></h4>
+                    <h6 class="inboxID win-h6" data-win-bind="textContent: inboxID"></h6>
+                    <button id="edit1" onclick="handler(eventObject)" class="win-button-file">Edit </button> 
+                    <button id="delete1" class="win-button-file"> Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- The declarative markup necesary for ListView instantiation -->
+        <!-- Call WinJS.UI.processAll() in your initialization code -->
+        <div id="listView1" class="listView win-selectionstylefilled"
+             data-win-control="WinJS.UI.ListView"
+             data-win-options="{
+                itemDataSource: Sample.ListView.data.dataSource,
+                itemTemplate: select('.smallListIconTextTemplate'),
+                selectionMode: 'none',
+                tapBehavior: 'none',
+                layout: { type: WinJS.UI.ListLayout }
+        }">
+        </div>
+
+       
+
+     
+    </div>
+</body>
+</html>

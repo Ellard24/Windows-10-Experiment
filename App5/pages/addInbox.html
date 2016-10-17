@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+
+
+
+
+
+
+    <!-- WinJS references -->
+    <link href="/lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="/lib/winjs-4.0.1/js/base.js"></script>
+    <script src="/lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="/css/default.css" rel="stylesheet" />
+
+
+    <script src="/js/addInbox.js"></script>
+
+</head>
+<body>
+    <div id="addStuff" class="container">
+        <h1 id="h1" class="win-h1">Create Inbox Screen</h1>
+        <p class="win-type-body">Please enter Name for Inbox</p>
+        <div class="content">
+            <form id="form1" action="javascript:createInbox()" method="POST">
+                <fieldset>
+                    <legend>Inbox Information</legend>
+                    <p><label> Name:</label> <input id="name" class="win-textbox" type="text"></p>
+                    
+
+                    <input type="submit" id="submission" class="win-button" value="Submit"> <input type="reset" class="win-button" value="Reset">
+                </fieldset>
+            </form>
+
+            
+            
+        </div>
+     
+        <button id="testB"> Go back</button>
+        <p id="p1"> </p>
+    </div>
+
+
+</body>
+</html>
